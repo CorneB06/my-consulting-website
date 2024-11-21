@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHB Consulting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background-color: #1a237e;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 2rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin-left: 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #283593;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(26, 35, 126, 0.9), rgba(26, 35, 126, 0.7)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .expertise {
+            padding: 4rem 2rem;
+            background-color: #f5f5f5;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .expertise-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .services {
+            padding: 4rem 2rem;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process {
+            background-color: #f5f5f5;
+            padding: 4rem 2rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .step-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            background-color: #1a237e;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .contact {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact form {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        input, textarea {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #1a237e;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #283593;
+        }
+
+        .footer {
+            background-color: #1a237e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #1a237e;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                justify-content: center;
+                padding: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .expertise-grid, .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#services">Services</a>
+            <a href="#process">Process</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Industrial Engineering & Business Excellence</h1>
+        <p>Transforming processes, optimizing operations, and driving business success through engineering excellence</p>
+    </section>
+
+    <section class="expertise" id="expertise">
+        <h2 class="section-title">Areas of Expertise</h2>
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <h3>Process Engineering</h3>
+                <p>Streamline operations, reduce waste, and improve efficiency through advanced process engineering methodologies</p>
+            </div>
+            <div class="expertise-card">
+                <h3>Business Strategy</h3>
+                <p>Develop and implement data-driven strategies to achieve sustainable growth and competitive advantage</p>
+            </div>
+            <div class="expertise-card">
+                <h3>Operational Excellence</h3>
+                <p>Optimize resource utilization and enhance productivity through lean principles and best practices</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Services</h2>
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <h3>Process Analysis & Optimization</h3>
+                <ul style="text-align: left; list-style-position: inside;">
+                    <li>Workflow assessment</li>
+                    <li>Bottleneck identification</li>
+                    <li>Efficiency improvements</li>
+                    <li>Cost reduction strategies</li>
+                </ul>
+            </div>
+            <div class="expertise-card">
+                <h3>Business Process Reengineering</h3>
+                <ul style="text-align: left; list-style-position: inside;">
+                    <li>End-to-end process redesign</li>
+                    <li>Implementation planning</li>
+                    <li>Change management</li>
+                    <li>Performance monitoring</li>
+                </ul>
+            </div>
+            <div class="expertise-card">
+                <h3>Strategic Planning</h3>
+                <ul style="text-align: left; list-style-position: inside;">
+                    <li>Market analysis</li>
+                    <li>Business model innovation</li>
+                    <li>Growth strategy development</li>
+                    <li>KPI development</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="process" id="process">
+        <h2 class="section-title">Our Process</h2>
+        <div class="process-steps">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Assess</h3>
+                <p>Comprehensive analysis of current processes, challenges, and opportunities</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Design</h3>
+                <p>Develop tailored solutions and strategies based on engineering principles</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Implement</h3>
+                <p>Execute solutions with careful change management and stakeholder engagement</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>Optimize</h3>
+                <p>Continuous monitoring and refinement to ensure sustained improvement</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Let's Discuss Your Business Goals</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Company Name">
+            <textarea placeholder="Tell us about your business challenges" rows="4" required></textarea>
+            <button type="submit">Schedule a Consultation</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Industrial Engineering Consulting. All rights reserved.</p>
+    </footer>
+</body>
+</html>
